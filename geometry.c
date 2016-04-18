@@ -69,3 +69,18 @@ void coord_2d_midpoint(coord_2d_t* mid, const coord_2d_t* a, const coord_2d_t* b
     mid->y = ((a->y + b->y) / 2.0 );
 
 }
+
+double coord_2d_area_triangle(const coord_2d_t *a, const coord_2d_t *b, const coord_2d_t *c){
+    if(!a){
+        DEBUG(__FILE__, __LINE__, __func__, "'a' must not be NULL");
+        return;
+    }
+    if(!b){
+        DEBUG(__FILE__, __LINE__, __func__, "'b' must not be NULL");
+        return;
+    }
+    if(!c){
+        DEBUG(__FILE__, __LINE__, __func__, "'c' must not be NULL");
+        return;
+    }
+
